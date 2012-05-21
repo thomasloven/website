@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Averia;
+    src: url('Averia-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    background: #ADABAC;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ADABAC), to(#DCDCDC));
+	background: -moz-linear-gradient(top,  #ADABAC,  #DCDCDC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADABAC', endColorstr='#DCDCDC');
+    margin: 20px;
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "Averia","Georgia", "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    color:#000;
+}
+
+
+a {
+    color: #800;
+    text-decoration: none;
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body .wrap {
+    width: 612px;
+    margin: 10 auto;
+    margin-bottom: 0;
+    background: #fff;
+    margin-top: 0;
+    padding: 10px;
+    padding-top: 10px;
+    border: 1px solid #000;
+    border-top: 0px;
+}
+
+body .wrap .links {
+    float: right;
+}
+
+body h1 {
+    font-size: 45px;
+    line-height 50px;
+    margin: 25px, 0;
+}
+
+img {
+    border: 1px solid #000;
+}
+
+img.left {
+    float: left;
+}
+
+img.right {
+    float: right;
+}
+
+#subtitle p {
+    color: #666;
+    margin-top: -22px;
+    margin-bottom: 22px;
+}
+
+#bottom {
+    margin: auto;
+    width: 612px;
+}
