@@ -5,13 +5,16 @@
     font-style: normal;
 }
 
+html
+{
+    height: 100%;
+}
+
 body
 {
-    background: #ADABAC;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ADABAC), to(#DCDCDC));
-	background: -moz-linear-gradient(top,  #ADABAC,  #DCDCDC);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADABAC', endColorstr='#DCDCDC');
-    margin: 20px;
+    height: 100%;
+    background: #DCDCDC;
+    margin: 0;
     margin-top: 0;
     font-size: 18px;
     line-height: 25px;
@@ -19,18 +22,15 @@ body
     color:#000;
 }
 
-
-a {
-    color: #800;
-    text-decoration: none;
-    font-style: italic;
+body #background {
+    width: 100%;
+    height: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ADABAC), to(#DCDCDC));
+	background: -moz-linear-gradient(top,  #ADABAC,  #DCDCDC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADABAC', endColorstr='#DCDCDC');
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-body .wrap {
+body #background #wrap {
     width: 812px;
     margin: auto;
     margin-bottom: 0;
@@ -42,11 +42,51 @@ body .wrap {
     border-top: 0px;
 }
 
-body .wrap .links {
+body #background #wrap #header {
+    border-bottom: solid 1px black;
+}
+
+body #background #wrap #header::after {
+    content:".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body #background #wrap #header #title {
+    float: left;
+}
+
+body #background #wrap #header #title h2 {
+    margin: 0;
+}
+
+body #background #wrap #header #links {
     float: right;
 }
 
-body h1 {
+body #background #bottom {
+    margin: auto;
+    width: 812px;
+}
+
+body #background #wrap #categories {
+    border-bottom: solid 1px black;
+
+}
+
+a {
+    color: #800;
+    text-decoration: none;
+    font-style: italic;
+}
+
+cufontext:hover, a:hover {
+    text-decoration: underline;
+}
+
+h1 {
     font-size: 45px;
     line-height 50px;
     margin: 25px, 0;
@@ -58,10 +98,12 @@ img {
 
 img.left {
     float: left;
+    margin-right: 10px;
 }
 
 img.right {
     float: right;
+    margin-left: 10px;
 }
 
 #subtitle p {
@@ -70,10 +112,6 @@ img.right {
     margin-bottom: 22px;
 }
 
-#bottom {
-    margin: auto;
-    width: 612px;
-}
 
 div pre {
     border: 1px solid #000;
@@ -84,5 +122,52 @@ pre.prettyprint {
     border: 1px solid #000;
     font-size: 18px;
     white-space: pre-wrap;
-    line-height: 25px;
+    line-height: 20px;
+    padding: 5px;
+}
+
+.content {
+}
+
+.content .contentItem {
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.content .contentItem:last-child {
+    border-bottom: 0;
+}
+
+.content ol {
+    list-style-type: none;
+}
+
+.content li.content {
+    float: left;
+    width: 350px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.content-list::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.post-text::first-letter {
+   font-size: 45px;
+}
+.content-list .content .postTitle,
+.content-list .content .postDate,
+.content-list .content .postSubTitle {
+    margin: 0;
+}
+
+.content-list .content .postDate {
+    color: #666;
 }

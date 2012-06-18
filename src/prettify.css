@@ -14,7 +14,7 @@
 pre.prettyprint { padding: 0px; border: 1px solid #888; clear: both; }
 
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+ol.linenums { margin-top: 0; margin-bottom: 0; margin-left: 30px} /* IE indents via margin-left */
 li.L0,
 li.L1,
 li.L2,

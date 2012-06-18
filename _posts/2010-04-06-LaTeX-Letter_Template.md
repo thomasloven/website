@@ -1,6 +1,8 @@
 ---
 layout: post
 title: LaTeX Letter Template
+subtitle: Simple and clean
+categories: latex
 ---
 I'm looking for a job for next year to get out of university for a while.
 

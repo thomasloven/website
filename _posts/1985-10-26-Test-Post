@@ -1,0 +1,36 @@
+---
+layout: post
+title: Lorem ipsum
+subtitle: Some placeholder text
+---
+
+Post subtitle {#subtitle}
+-------------
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ante odio. Etiam sit amet est in lorem vulputate iaculis. Nulla facilisi. Maecenas eget lacus turpis. Maecenas vel fermentum libero. Quisque at consequat nisi. Integer tempus vulputate rutrum. Fusce tempus ullamcorper tortor, a ornare dolor lacinia id. Nulla facilisi. Fusce id ante vel justo tincidunt lobortis. Morbi adipiscing placerat justo, ut vulputate arcu feugiat quis. Nullam aliquam vulputate quam, id ultricies quam faucibus non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+    \( \nabla \)
+{: lang=latex}
+
+Some changeded `\[\sum^N_{i=0}\left(1+\frac{1}{n}\right)^n\]`{: .latex}text.
+{: .latex}
+
+    code(int main)
+    \[ \pi \]
+{: .prettyprint}
+
+![](http://placekitten.com/200/298){: .left}
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin metus est, vestibulum vitae eleifend et, egestas eget ante. Fusce fermentum porttitor erat, id pellentesque metus condimentum a. Curabitur gravida purus vel nibh pulvinar volutpat. Praesent ac tristique felis. Donec sed luctus tellus. Cras at mi nisl, non tincidunt magna. Pellentesque erat turpis, blandit eu sollicitudin sed, dapibus in nibh. Proin commodo, metus et tempor mollis, ante arcu vehicula metus, quis dapibus nibh purus a turpis. Vivamus accumsan purus in dui posuere auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Nunc vulputate, odio a fringilla auctor, sapien magna sollicitudin nunc, vitae tristique justo magna sit amet mauris. Quisque consequat nulla sed mi pretium id mattis libero aliquet.
+
+
+    int main(int argc, char ** argv)
+    {
+        call_function(0x10);
+        return 0;
+    }
+{: lang=prettyprint}
+
+Sed rutrum auctor tellus, vitae facilisis quam condimentum nec. Integer nec mattis urna. Donec tortor risus, scelerisque ultricies gravida vitae, bibendum sed justo. Sed sollicitudin sollicitudin lectus vitae molestie. In hac habitasse platea dictumst. Etiam enim arcu, laoreet id iaculis id, molestie sodales felis. In risus nibh, faucibus a suscipit ac, suscipit eu tellus. Curabitur dolor libero, gravida sit amet porta at, consectetur tincidunt nisi. Aliquam in orci enim, vel elementum nisi. Etiam ipsum augue, ultricies sit amet rhoncus eget, dictum quis dui. Phasellus augue sem, luctus ut faucibus id, convallis at justo. Proin eu turpis diam, imperdiet venenatis eros. Curabitur faucibus leo sit amet est ultricies accumsan non ac sem.
+
+Sed venenatis malesuada tristique. Aliquam ornare rutrum nisi at varius. Sed sit amet iaculis risus. Curabitur sapien mi, pretium in rutrum a, porta id quam. Aenean vestibulum volutpat viverra. Nullam eget risus ac magna sodales ornare sit amet sit amet enim. Pellentesque orci magna, tincidunt et varius non, adipiscing a quam. Quisque laoreet est velit. Proin ultricies feugiat lectus sed condimentum. Sed laoreet gravida tortor, non luctus lorem blandit quis. Mauris at dolor justo. Proin sit amet rhoncus mauris. Donec sem elit, dictum at ullamcorper quis, aliquam a urna. Donec laoreet, erat quis cursus sollicitudin, risus lectus consectetur diam, sed hendrerit sem arcu euismod mi.
+
+Donec dictum, odio ac lacinia sollicitudin, sem felis ornare sem, at ullamcorper massa leo in ligula. Cras lectus lorem, vestibulum non tincidunt a, euismod vel risus. Donec lacus eros, scelerisque porta rhoncus sit amet, porttitor et tortor. Curabitur sit amet elit lacus, nec scelerisque justo. Fusce turpis elit, interdum vel pharetra ac, fermentum et risus. Cras in lectus id justo mattis ultricies quis sed sapien. Donec congue auctor augue id convallis. Praesent varius enim sit amet magna adipiscing faucibus. Sed libero dolor, egestas sed aliquam quis, viverra vitae mauris. Nullam eget massa et leo dignissim interdum ac rutrum enim. Vestibulum nec sem nec arcu aliquet fermentum. Nunc ornare tellus in est dictum mollis pharetra sapien iaculis. Nullam ut nisl libero, at accumsan nisl.
