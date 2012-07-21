@@ -13,7 +13,7 @@ html
 body
 {
     height: 100%;
-    background: #DCDCDC;
+    background: #DCDCFC;
     margin: 0;
     margin-top: 0;
     font-size: 18px;
@@ -25,9 +25,9 @@ body
 body #background {
     width: 100%;
     height: 100%;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ADABAC), to(#DCDCDC));
-	background: -moz-linear-gradient(top,  #ADABAC,  #DCDCDC);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADABAC', endColorstr='#DCDCDC');
+	background: -webkit-gradient(linear, left top, left bottom, from(#ADABFC), to(#DCDCFC));
+	background: -moz-linear-gradient(top,  #ADABFC,  #DCDCFC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADABFC', endColorstr='#DCDCFC');
 }
 
 body #background #wrap {
@@ -82,6 +82,11 @@ a {
     font-style: italic;
 }
 
+a.external {
+	padding-right: 12px;
+	background: url(/media/img/ico_external.gif) no-repeat 100% 50%;
+}
+
 cufontext:hover, a:hover {
     text-decoration: underline;
 }
@@ -119,11 +124,13 @@ div pre {
 }
 
 pre.prettyprint {
-    border: 1px solid #000;
-    font-size: 18px;
+    border: 1px solid #888;
+    font-size: 14px;
     white-space: pre-wrap;
-    line-height: 20px;
+    line-height: 18px;
     padding: 5px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 .content {

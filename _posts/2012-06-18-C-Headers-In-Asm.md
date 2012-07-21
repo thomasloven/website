@@ -5,7 +5,7 @@ subtitle: Cleaning up the build chain
 categories: osdev
 ---
 
-Something that always anoyed me is how hard it is to synchronize constants between assembly and c code.
+Something that always annoyed me is how hard it is to synchronize constants between assembly and c code.
 In assembler, you define a constant value as
 
 	EXACT_PI equ 3
@@ -15,7 +15,7 @@ and in c
 
 	#define EXACT_PI 3
 {: .prettyprint .lang-c}
-As is usually the case with things that anoy me, there is of course a solution to this, as I found out today.
+As is usually the case with things that annoy me, there is of course a solution to this, as I found out today.
 The solution is the c preprocessor.
 
 Normally, when you run a c compiler, it makes multiple passes over your source file. The first one or two times, it runs a pre-processor. The preprocessor checks for things like _#include_ and _#define_ and replaces macros. The next pass actually compiles the code. Then the compiler invokes a linker and so on.

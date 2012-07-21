@@ -1022,7 +1022,7 @@ Cufon.registerEngine('vml', (function() {
 	check = null;
 
 	var HAS_BROKEN_LINEHEIGHT = (document.documentMode || 0) < 8;
-
+	
 	var styleSheet = document.createElement('style');
 	styleSheet.type = 'text/css';
 	styleSheet.styleSheet.cssText = (

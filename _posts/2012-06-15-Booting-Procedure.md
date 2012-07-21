@@ -9,7 +9,7 @@ categories: osdev
 
 To boot up the operating system kernel, I use [GRUB](http://www.gnu.org/software/grub/). It takes care of things like getting into protected mode, checking the memory and activating processor flags. It can also load any file you ask it to into memory - which is good, because we won't see a disk driver here anytime soon - before starting the loaded kernel.
 
-I want to write a kernel that resides in a high part of memory (0xC0000000 and above) because I think it looks tidy. In order to load a high part kernel without paging, I use the trick described at [osdev.org](http://wiki.osdev.org/Higher_Half_bare_bones). This reqires a special Linker file for the kernel.
+I want to write a kernel that resides in a high part of memory (0xC0000000 and above) because I think it looks tidy. In order to load a high part kernel without paging, I use the trick described at [osdev.org](http://wiki.osdev.org/Higher_Half_bare_bones). This requires a special Linker file for the kernel.
 
 *kernel/include/Link.ld*
 

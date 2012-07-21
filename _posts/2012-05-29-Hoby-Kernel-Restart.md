@@ -7,15 +7,15 @@ categories: osdev
 
 Many years ago, I got interesting in trying out Linux. Having used Windows since my parents started using Windows computers at work and declared our old Macintoshes obsolete I realized it would mean quite a change and didn't really want to go all in right away. Somehow I found out about VMWare Workstation - an Intel processor emulator made for running virtual computers within Windows and installed one of the first versions of Ubuntu in it.
 
-I played around with Ubuntu Linux for a while, but then I started thinking about the computer emulator I was using and wondered wether I could make a program myself that would boot in it. In other words, could I write a program that ran by itself on a computer with no operating system?
+I played around with Ubuntu Linux for a while, but then I started thinking about the computer emulator I was using and wondered whether I could make a program myself that would boot in it. In other words, could I write a program that ran by itself on a computer with no operating system?
 
-The answer turned out to be yes. With a lot of help and tutorials from what later became [osdev.org](http://www.osdev.org) and many more that I unfortunately can't remember or find anymore, I wrote a small binary executable in Assembly that could run of the boot sector on a floppy disk. I was amazed! Could it realy be this simple? I immediately set out to write an entire operating system. Nothing fancy; I just wanted to boot the computer and get into a desktop environment with a text editor and a compiler so I could keep adding to the system from within it. Shouldn't be too hard, should it?
+The answer turned out to be yes. With a lot of help and tutorials from what later became [osdev.org](http://www.osdev.org) and many more that I unfortunately can't remember or find anymore, I wrote a small binary executable in Assembly that could run of the boot sector on a floppy disk. I was amazed! Could it really be this simple? I immediately set out to write an entire operating system. Nothing fancy; I just wanted to boot the computer and get into a desktop environment with a text editor and a compiler so I could keep adding to the system from within it. Shouldn't be too hard, should it?
 
 Almost ten years later, I think I got the routines for basic BIOS-assisted screen printing down...
 
 There are several reasons why things are moving so slowly. First and foremost: It wasn't that easy. Operating systems are advanced stuff, and combined with my own lack of any formal education or experience in programming or computer systems this means progress is slow.
 
-Next is a lack of time. Back when I found VMWare Workstation and started this journey, I was on summer holiday from school and had all the time in the world. Then school started again. Then came the Chrismas holiday and I realized I had forgotten everything. So I threw everything out and started again from scratch. This time I got a bit further. Then school started again.
+Next is a lack of time. Back when I found VMWare Workstation and started this journey, I was on summer holiday from school and had all the time in the world. Then school started again. Then came the Christmas holiday and I realized I had forgotten everything. So I threw everything out and started again from scratch. This time I got a bit further. Then school started again.
 
 And that's how it's been since then. School started, ended and begun again. Then I did a year in the army. Then university (engineering physics). Then I met a girl, got engaged, bought a house, worked for a year with project management, went back to university... Still, every now and then I've restarted development of my operating system dream.
 
