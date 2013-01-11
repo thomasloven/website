@@ -1,9 +1,11 @@
 @font-face {
     font-family: Averia;
-    src: url('Averia-Regular.ttf');
+    /*src: url('Averia-Regular.ttf');*/
+  src: local('Averia Gruesa Libre'), local('AveriaGruesaLibre-Regular'), url(http://themes.googleusercontent.com/static/fonts/averiagruesalibre/v1/10vbZTOoN6T8D-nvDzwRF52VtiXDaDJux1YX1Y0t1wM.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 
 html
 {
@@ -12,29 +14,25 @@ html
 
 body
 {
-    height: 100%;
-    background: #DCDCFC;
     margin: 0;
     margin-top: 0;
     font-size: 18px;
     line-height: 25px;
     font-family: "Averia","Georgia", "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
-    color:#000;
+		background: #002b36;
+		background-color: #002b36;
 }
 
-body #background {
-    width: 100%;
-    height: 100%;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ADABFC), to(#DCDCFC));
-	background: -moz-linear-gradient(top,  #ADABFC,  #DCDCFC);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADABFC', endColorstr='#DCDCFC');
+html
+{
+	background-color: #002b36;
 }
 
-body #background #wrap {
-    width: 812px;
+
+body #wrap {
+    width: 712px;
     margin: auto;
     margin-bottom: 0;
-    background: #fff;
     margin-top: 0;
     padding: 10px;
     padding-top: 10px;
@@ -42,11 +40,11 @@ body #background #wrap {
     border-top: 0px;
 }
 
-body #background #wrap #header {
+body #wrap #header {
     border-bottom: solid 1px black;
 }
 
-body #background #wrap #header::after {
+body #wrap #header::after {
     content:".";
     display: block;
     height: 0;
@@ -54,26 +52,30 @@ body #background #wrap #header::after {
     visibility: hidden;
 }
 
-body #background #wrap #header #title {
+body #wrap #header #title {
     float: left;
 }
 
-body #background #wrap #header #title h2 {
+body #wrap #header #title h2 {
     margin: 0;
 }
 
-body #background #wrap #header #links {
+body #wrap #header #links {
     float: right;
 }
 
-body #background #bottom {
+body #bottom {
     margin: auto;
-    width: 812px;
+    width: 712px;
 }
 
-body #background #wrap #categories {
+body #wrap #categories {
     border-bottom: solid 1px black;
 
+}
+
+em {
+	color: #006;
 }
 
 a {
@@ -89,6 +91,7 @@ a.external {
 
 cufontext:hover, a:hover {
     text-decoration: underline;
+	color: green;
 }
 
 h1 {
@@ -123,14 +126,19 @@ div pre {
     padding: 10px;
 }
 
-pre.prettyprint {
+pre, pre.prettyprint {
+	width: 80%;
     border: 1px solid #888;
     font-size: 14px;
     white-space: pre-wrap;
     line-height: 18px;
     padding: 5px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+code {
+	font-size: 14px;
 }
 
 .content {
@@ -153,7 +161,7 @@ pre.prettyprint {
 
 .content li.content {
     float: left;
-    width: 350px;
+    width: 330px;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -173,6 +181,10 @@ pre.prettyprint {
 .content-list .content .postDate,
 .content-list .content .postSubTitle {
     margin: 0;
+}
+
+.postSubTitle {
+	font-size: 90%;
 }
 
 .content-list .content .postDate {

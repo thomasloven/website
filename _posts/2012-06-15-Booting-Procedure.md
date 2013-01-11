@@ -7,9 +7,17 @@ categories: osdev
 
 [Previous part](/blog/2012/06/Setting-Up/)
 
-To boot up the operating system kernel, I use [GRUB](http://www.gnu.org/software/grub/). It takes care of things like getting into protected mode, checking the memory and activating processor flags. It can also load any file you ask it to into memory - which is good, because we won't see a disk driver here anytime soon - before starting the loaded kernel.
+To boot up the operating system kernel, I use
+[GRUB](http://www.gnu.org/software/grub/). It takes care of things like getting
+into protected mode, checking the memory and activating processor flags. It can
+also load any file you ask it to into memory - which is good, because we won't
+see a disk driver here anytime soon - before starting the loaded kernel.
 
-I want to write a kernel that resides in a high part of memory (0xC0000000 and above) because I think it looks tidy. In order to load a high part kernel without paging, I use the trick described at [osdev.org](http://wiki.osdev.org/Higher_Half_bare_bones). This requires a special Linker file for the kernel.
+I want to write a kernel that resides in a high part of memory (0xC0000000 and
+above) because I think it looks tidy. In order to load a high part kernel
+without paging, I use the trick described at
+[osdev.org](http://wiki.osdev.org/Higher_Half_bare_bones). This requires
+a special Linker file for the kernel.
 
 *kernel/include/Link.ld*
 
@@ -42,8 +50,9 @@ I want to write a kernel that resides in a high part of memory (0xC0000000 and a
 	}
 {: .prettyprint .linenums}
 
-GRUB drops us off at the kernel entry point - *start* as defined in the linkfile - without paging and with an unknown GDT. So setting that up will be the first order of business.
-This is done in the assembly bootstrap.
+GRUB drops us off at the kernel entry point - *start* as defined in the
+linkfile - without paging and with an unknown GDT. So setting that up will be
+the first order of business.  This is done in the assembly bootstrap.
 
 *kernel/boot.s*
 
@@ -72,7 +81,10 @@ This is done in the assembly bootstrap.
 	.gdtLoaded:
 {: .prettyprint .lang-nasm .linenums:61}
 
-Here's another new thing for me. Macros. Can't believe I could do without them before. *SetSegments* is a macro that in this case loads 0x10 into ecx and then loads cx into each segment selector register. It is defined in an included file which also contains some constants.
+Here's another new thing for me. Macros. Can't believe I could do without them
+before. *SetSegments* is a macro that in this case loads 0x10 into ecx and then
+loads cx into each segment selector register. It is defined in an included file
+which also contains some constants.
 
 *kernel/include/asm_macros.inc*
 
@@ -99,7 +111,8 @@ Here's another new thing for me. Macros. Can't believe I could do without them b
 	%endmacro
 {: .prettyprint .lang-nasm .linenums:2}
 
-There are also references to some data structures, i.e. *BootPageDirectory* and *gdt_ptr*. Those are hardcoded in the bootstrap file.
+There are also references to some data structures, i.e. *BootPageDirectory* and
+*gdt_ptr*. Those are hardcoded in the bootstrap file.
 
 *kernel/boot.s*
 
@@ -164,10 +177,19 @@ There are also references to some data structures, i.e. *BootPageDirectory* and 
 		dd MBOOT_HEADER_CHECKSUM
 {: .prettyprint .lang-nasm .linenums:2}
 
-Well. This is first of all some area saved for a stack. Then there's the page directory which has the same page table at virtual memory 0x00000000 and 0xC0000000. The rest of the page directory is cleared. The page table maps the first four megabytes of physical memory.
-The hard-coded GDT has five entries. The first one is always empty, so this space is used to store the gdt pointer. Then there's kernel code, kernel data, user code and user data. Each segment has base 0 and size 4 gb, so they all contain all of the virtual memory space. Finally, there's the multiboot header for GRUB. This has to be at the very start of the .data section, so it is also loaded first by the makefile.
+Well. This is first of all some area saved for a stack. Then there's the page
+directory which has the same page table at virtual memory 0x00000000 and
+0xC0000000. The rest of the page directory is cleared. The page table maps the
+first four megabytes of physical memory.  The hard-coded GDT has five entries.
+The first one is always empty, so this space is used to store the gdt pointer.
+Then there's kernel code, kernel data, user code and user data. Each segment
+has base 0 and size 4 gb, so they all contain all of the virtual memory space.
+Finally, there's the multiboot header for GRUB. This has to be at the very
+start of the .data section, so it is also loaded first by the makefile.
 
-The last thing we need before we can go into a higher level language is a stack, but let's take this opportunity to also remove the identity mapping from the page directory.
+The last thing we need before we can go into a higher level language is
+a stack, but let's take this opportunity to also remove the identity mapping
+from the page directory.
 
 *kernel/boot.s*
 
@@ -195,7 +217,9 @@ The last thing we need before we can go into a higher level language is a stack,
 	jmp $
 {: .prettyprint .lang-nasm .linenums:83}
 
-The final thing we do before jumping into the c kernel stub is push the values of eax and ebx which contains the multiboot magic number and information structure location respectively.
+The final thing we do before jumping into the c kernel stub is push the values
+of eax and ebx which contains the multiboot magic number and information
+structure location respectively.
 
 The only thing that's left now in order to get this to run is the c stub.
 
@@ -208,8 +232,8 @@ The only thing that's left now in order to get this to run is the c stub.
 	}
 {: .prettyprint .linenums:2}
 
-Compiling and running this through bochs, we are presented with a black and white screen completely void of error messages.
-Perfect!
+Compiling and running this through bochs, we are presented with a black and
+white screen completely void of error messages.  Perfect!
 
 The code up to this point can be found in my github repository.
 Commit [66dd86fc12](https://github.com/thomasloven/os5/tree/66dd86fc128e2714e4c93c73d8a0bf8542e10573)

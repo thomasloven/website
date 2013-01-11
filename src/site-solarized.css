@@ -1,0 +1,42 @@
+/*Note to self: Look up sass to get this running if needed*/
+/* light is default mode, so pair with general html definition */
+html, .light {
+  /*background-color:$rebase03;*/
+  color: #657b83; }
+  html *, .light * {
+    color: #657b83; }
+  html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    color: #586e75;
+    border-color: #657b83; }
+  html a, html a:active, html a:visited, .light a, .light a:active, .light a:visited {
+    color: #586e75; }
+  html body #wrap, .light body #wrap {
+    background-color: #fdf6e3; }
+
+.dark {
+  /*background-color:$rebase03;*/
+  color: #839496; }
+  .dark * {
+    color: #839496; }
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #93a1a1;
+    border-color: #839496; }
+  .dark a, .dark a:active, .dark a:visited {
+    color: #93a1a1; }
+  .dark body #wrap {
+    background-color: #002b36; }
+
+html.red a, html.red a:active, html.red a:visited, html.red code.url, .red a, .red a:active, .red a:visited, .red code.url {
+  color: #268bd2; }
+html.red h1, html.red h2, html.red h3, html.red h4, html.red h5, html.red h6, .red h1, .red h2, .red h3, .red h4, .red h5, .red h6 {
+  color: #cb4b16; }
+html.red strong, .red strong {
+  color: #6c71c4; }
+html.red em, .red em {
+  color: #2aa198; }
+html.red p code, .red p code {
+  color: #2aa198; }
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }

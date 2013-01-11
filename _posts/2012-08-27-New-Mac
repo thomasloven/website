@@ -1,0 +1,53 @@
+---
+layout: post
+title: New Mac
+---
+
+Here's what I installed
+
+- Fix scrolling
+- Tap to click
+- Google Chrome
+- iTerm2
+- Xcode
+  - Command line tools
+- Quicksilver
+- Dropbox
+- Java (open Java settings)
+
+- Brew: macvim
+- Brew: tmux
+- Brew: par
+
+
+	cd
+	git init
+	git remote add origin https://github.com/thomasloven/dotfiles.git
+	git pull
+	git checkout -b master
+	git submodule init
+	git submodule update
+
+Install fonts for powerline
+Change Shift lock to ctrl
+
+Turn off gatekeeper
+- Minecraft
+- Jekyll
+- Transmission
+
+Cross compiler (only binutils)
+
+- MacFUSE
+- fuse-ext2
+
+- BootCamp (Windows 7)
+- BootCamp: Steam
+
+- ScrollReverser
+
+- 64 bit macfuse
+- Bochs (could not build out of tree...)
+  - Brew: gtk+
+  - export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig/
+-Brew: ntfs-3g

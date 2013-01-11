@@ -1,4 +1,4 @@
-* Pretty printing styles. Used with prettify.js. */
+/* Pretty printing styles. Used with prettify.js. */
 /* Vim sunburst theme by David Leibovic */
 
 pre .str, code .str { color: #65B042; } /* string  - green */

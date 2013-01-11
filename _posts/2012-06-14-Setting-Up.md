@@ -7,9 +7,12 @@ categories: osdev
 
 So it's time to start.
 
-I have previously set up a cross compiler environment on my Mac mini, and am now developing on it connected via ssh.
+I have previously set up a cross compiler environment on my Mac mini, and am
+now developing on it connected via ssh.
 
-First point today was making a directory structure and creating a [git repository](http://github.com/thomasloven/os5). The directory structure starts off as follows
+First point today was making a directory structure and creating a [git
+repository](http://github.com/thomasloven/os5). The directory structure starts
+off as follows
 
 	os5/
 	|-- build/
@@ -17,7 +20,11 @@ First point today was making a directory structure and creating a [git repositor
 	`-- kernel/
 	    `-- include/
 
-A difference from previous times is that the _include_ directory is outside the kernel directory. That's because last time I realized I had a lot of include files that were used both in the kernel and many other parts. I'll probably move it into some library directory later. Know what? Let's move it into a library directory right now...
+A difference from previous times is that the _include_ directory is outside the
+kernel directory. That's because last time I realized I had a lot of include
+files that were used both in the kernel and many other parts. I'll probably
+move it into some library directory later. Know what? Let's move it into
+a library directory right now...
 
 	os5/
 	|-- build/
@@ -26,9 +33,12 @@ A difference from previous times is that the _include_ directory is outside the 
 	`-- library/
 	    `-- include/
 
-The build/ directory contains some scripts needed for building and testing the os as well as a floppy image preinstalled with the GRUB bootloader.
+The build/ directory contains some scripts needed for building and testing the
+os as well as a floppy image preinstalled with the GRUB bootloader.
 
-Next, basic Makefiles were added to os5/ and kernel/. The standard procedure of the main makefile is to run the makefile in kernel/, copy the kernel image into the floppy and then run bochs-term.
+Next, basic Makefiles were added to os5/ and kernel/. The standard procedure of
+the main makefile is to run the makefile in kernel/, copy the kernel image into
+the floppy and then run bochs-term.
 
 	
 	BUILDDIR := $(PWD)
