@@ -34,7 +34,7 @@ html.red strong, .red strong {
   color: #6c71c4; }
 html.red em, .red em {
   color: #2aa198; }
-html.red p code, .red p code {
+html.red p code, html.red li code, .red p code, .red li code {
   color: #2aa198; }
 
 html * {

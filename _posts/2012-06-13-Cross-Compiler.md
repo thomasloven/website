@@ -34,7 +34,7 @@ I downloaded all the sources I needed from [gnu.org](http://gnu.org).
 	curl -O http://ftp.gnu.org/gnu/gmp/gmp-5.0.2.tar.gz
 	curl -O http://ftp.gnu.org/gnu/mpfr/mpfr-3.1.0.tar.gz
 	curl -O http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz
-{: .prettyprint .lang-bsh}
+{: .prettyprint .lang-bash}
 
 Feel free to use later versions, but if you do, I cannot guarantee that the
 code posted in my logs will work for you (it's very likely to work, but not
@@ -45,7 +45,7 @@ source
 	mv gmp-5.0.2 gcc-4.6.3/gmp
 	mv mpfr-3.1.0 gcc-4.6.3/mpfr
 	mv mpc-0.9 gcc-4.6.3/mpc
-{: .prettyprint}
+{: .prettyprint .lang-sh}
 
 In order not to mess up the source, binutils and gcc were built out of tree.
 
@@ -57,7 +57,7 @@ In order not to mess up the source, binutils and gcc were built out of tree.
 	../binutils-2.22/configure --target=$TARGET --prefix=$PREFIX --disable-nls
 	make all
 	make install
-{: .prettyprint}
+{: .prettyprint .lang-bash}
 
 And the same for gcc, using the new binutils
 
@@ -68,7 +68,7 @@ And the same for gcc, using the new binutils
 	../gcc-4.6.3/configure --target=$TARGET --prefix=$PREFIX --disable-nls --enable-languages=c --without-headers
 	make all-gcc
 	make install-gcc
-{: .prettyprint }
+{: .prettyprint .lang-bash}
 
 It's really important to run _make all-gcc_ and _make install-gcc_ and __not__
 _make all_ and _make install_ here. It probably works anyway - if you ever

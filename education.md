@@ -45,6 +45,12 @@ I earned my bachelors degree in 2012.
 	FFM232 Vektorfält och klassisk fysik 4,5hp
 {: .prettyprint .lang-betyg}
 
+###Bachelors thesis
+For our bachelors thesis me, two of my fellow students at Engineering
+physics and three students at Elektroteknik - roughly electrics and
+electronics - developed, built and tested a wireless charing station for
+cellular phones.
+
 Complex Adaptive Systems
 ------------------------
 

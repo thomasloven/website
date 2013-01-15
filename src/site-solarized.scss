@@ -31,7 +31,7 @@ $green:     #859900;
     h1,h2,h3,h4,h5,h6 {color:$accent1}
     strong { color: $accent3 }
     em { color: $accent4 }
-    p code { color: $accent4 }
+    p code, li code { color: $accent4 }
 }
 
 /* light is default mode, so pair with general html definition */
