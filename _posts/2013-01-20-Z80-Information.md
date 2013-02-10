@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Z80 Tests
+title: Z80 Information
 subtitle: A humble beginning
 categories: electronics
 ---
@@ -45,13 +45,15 @@ What this means
 ---------------
 What those hardware features mean, is that getting a Z80 to run is
 actually really simple. All we need in ways of support circuits are a
-single square wave clock signal and a reliable reset circuit.
+single square wave clock signal and a reliable reset circuit. Oh, and a
+power supply of course.
 
 A step back
 -----------
 But we shouldn't get ahead of ourselves here. Let's instead take a step
 back and look at the Z80.
 
+![Z80 pinout](/media/img/z80_pinout.png){: .right}
 This is the pinout of a standard Z80 in a 40-pin DIP package. I have
 colorized the pins to show one way of grouping their functions.
 

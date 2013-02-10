@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Return-To-Kernel-Mode
+title: Return To Kernel Mode
 subtitle: Seriously, what's up with TSS?
 categories: osdev
 ---
