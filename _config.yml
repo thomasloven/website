@@ -1,6 +1,7 @@
+server: true
 auto: true
 markdown: maruku
 permalink: /blog/:year/:month/:title
-rdiscount
+rdiscount:
   extensions: [smart]
 pygments: true

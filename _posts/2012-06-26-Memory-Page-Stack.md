@@ -69,3 +69,6 @@ This page stack has been implemented in Git commit
 Also implemented in the same commit is a virtual memory manager with recursive
 page directories described in [this
 post](/blog/2012/06/Recursive-Page-Directory).
+
+__Note__: There's a bug in that commit. In short, when filling the stack, the pmm looks for memory map entries between `assert_higher(mmap_start)` and `mmap_start + mmap_size`. Where the `assert_higher` macro pretty much just adds `0xC0000000` to the adress. Well... I'm sure you see what the problem is.
+The bug has been rectified in Git commit [ebaae73](https://github.com/thomasloven/os5/tree/ebaae7383bbadbfc3de62b1b14aa9a450d8e695c).
