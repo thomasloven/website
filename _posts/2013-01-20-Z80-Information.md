@@ -53,7 +53,7 @@ A step back
 But we shouldn't get ahead of ourselves here. Let's instead take a step
 back and look at the Z80.
 
-![Z80 pinout](/media/img/z80_pinout.png){: .right}
+![Z80 pinout](/media/img/z80_pinout2.png){: .right .noborder}
 This is the pinout of a standard Z80 in a 40-pin DIP package. I have
 colorized the pins to show one way of grouping their functions.
 

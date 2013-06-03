@@ -19,7 +19,7 @@ with really really small memory pages. Now imagine that this computer has an
 even equally small virtual memory space - 16 pages in total. Those 16 pages are
 divided into four groups and this is our key to addressing them.
 
-![VMM1](/media/img/vmm1.png)
+![VMM1](/media/img/vmm1b.png){: .center .noborder}
 
 Above, we see the address space of our imagined computer illustrated as 16 blue
 squares.  Let's say the processor wishes to access the sixth page and that
@@ -56,7 +56,7 @@ looking up the fourth group in the page directory. It finds the address of the
 page directory and assumes this is the page table for the group. It caries on,
 looking up the second entry in this 'page table' and gets the address of the
 page it wants. This happens to be the address of the page table for the second
-group.  ![VMM2](/media/img/vmm2.png)
+group.  ![VMM2](/media/img/vmm2b.png){: .center .noborder}
 
 In other words, you can access any page table through a fixed address in
 memory. But wait, it gets even better.
@@ -66,7 +66,7 @@ virtual memory. The MMU will look up the last entry in the page directory and
 get the address of the page directory. It will then look up the last entry in
 the page directory and get the address of the page directory (that's not a typo
 - I meant to write the same thing twice). This lets you access the page
-directory too through a fixed memory address.  ![VMM3](/media/img/vmm3.png)
+directory too through a fixed memory address.  ![VMM3](/media/img/vmm3b.png){: .center .noborder}
 
 ###Some considerations
 An important question to put at this point is whether a recursive page

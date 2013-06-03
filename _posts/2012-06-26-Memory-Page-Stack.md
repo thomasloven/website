@@ -34,16 +34,16 @@ that each page only has room for four pointers. The figure below shows eight
 physical pages of a such computer. The two leftmost pages are used by the
 physical memory manager for the free page stack. The stack contains pointers to
 the next five pages, who are free. The rightmost page is handed out.
-![PMM1](/media/img/pmm1.png)
+![PMM1](/media/img/pmm1b.png){: .noborder .center}
 
 When the _pmm_ receives a request for a memory page it will pop the topmost
 entry from the stack and returns, in this case, the second rightmost page to
-the caller.  ![PMM2](/media/img/pmm2.png)
+the caller.  ![PMM2](/media/img/pmm2b.png){: .noborder .center}
 
 The next time the pmm receives a request for a memory page it will notice that
 an entire page of the stack is empty and just being wasted, so it will shrink
 its stack by one page-size and return the address of the page that previously
-made up the top of the stack.  ![PMM3](/media/img/pmm3.png)
+made up the top of the stack.  ![PMM3](/media/img/pmm3b.png){: .noborder .center}
 
 Likewise, if the stack is full of pointers when a used page is handed back,
 that page is used to increase the stack space. Through the use of virtual

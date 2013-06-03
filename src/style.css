@@ -114,6 +114,16 @@ img.right {
     margin-left: 10px;
 }
 
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.noborder {
+  border: 0px;
+}
+
 #subtitle p {
     color: #666;
     margin-top: -22px;
