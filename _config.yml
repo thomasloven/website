@@ -5,3 +5,4 @@ permalink: /blog/:year/:month/:title
 rdiscount:
   extensions: [smart]
 pygments: true
+relative_permalinks: false
