@@ -37,9 +37,9 @@ PR.registerLangHandler(
          [PR.PR_KEYWORD, /^\[[\w\s]+\]/],
 	 [PR.PR_KEYWORD, /^\%\w+/],
 	 [PR.PR_KEYWORD,
-          /^(?:align|cli|sti|mov|equ|dd|dw|times|or|lgdt|xor|invlpg|add|pusha|push|call|jmp|popa|pop)/],
+          /^\b(align|cli|sti|mov|equ|dd|dw|times|or|lgdt|xor|invlpg|add|pusha|push|call|jmp|popa|pop|int|ret)\b/],
 	 [PR.PR_TYPE,
-          /^(?:eax|ax|ah|al|ebx|bx|bh|bl|ecx|cx|ch|cl|edx|dx|dh|dl|esi|edi|ebp|eip|esp|eflags|cs|ds|es|fs|gs|ss|cr0|cr1|cr2|cr3|cr4)/],
+          /^\b(eax|ax|ah|al|ebx|bx|bh|bl|ecx|cx|ch|cl|edx|dx|dh|dl|esi|edi|ebp|eip|esp|eflags|cs|ds|es|fs|gs|ss|cr0|cr1|cr2|cr3|cr4)\b/],
          [PR.PR_LITERAL, /^0x[0-9A-F]*/],
 	 [PR.PR_LITERAL, /^\d+/]
 	 
